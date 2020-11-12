@@ -1,21 +1,164 @@
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.post-link {
-    text-decoration: none;
-}
-
-
-
-footer {
-    min-height: 100px;
-    background-color: #eaecee70;
-    color: #929eaa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    font-size: 14px;
-}
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .post-link {
+        text-decoration: none;
+    }
+    
+    header {
+        min-height: 350px;
+        background-color: purple;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../assets/banner.jpeg);
+        background-size: cover;
+        position: relative;
+    }
+    
+    header>* {
+        z-index: 10;
+    }
+    
+    header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        border-radius: 50%;
+        background-image: url('../assets/profile1.jpg');
+        background-size: cover;
+    }
+    
+    .profile-name {
+        font-size: 3em;
+        font-weight: bold;
+    }
+    
+    .subtext {
+        margin-top: 8px;
+        text-align: center;
+    }
+    
+    .main {
+        background-color: yellow;
+        height: 100px;
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .main-container {
+        max-width: 750px;
+        min-width: 600px;
+        width: 100%;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    
+    footer {
+        min-height: 100px;
+        background-color: #eaecee70;
+        color: #929eaa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        font-size: 14px;
+    }
+    
+    .post {
+        margin-top: 24px;
+        display: flex;
+        border: 1px solid #eaecee;
+        border-radius: 8px;
+        min-height: 200px;
+        overflow: hidden;
+        transition: transform 0.5s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .post:hover {
+        transform: translate3d(0, -20px, 0);
+        box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.1);
+    }
+    
+    .post-image {
+        flex-basis: 40%;
+        background-image: url('../assets/duck.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .post-content {
+        flex-basis: 60%;
+        background-color: royalblue;
+        padding: 24px;
+    }
+    
+    .post-date {
+        font-size: 12px;
+        color: #611;
+        font-weight: 600;
+    }
+    
+    .post-title {
+        margin-top: 16px;
+        margin-bottom: 5px;
+        font-size: 1.5em;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .post-title h4 {
+        margin: 0;
+    }
+    
+    .post-text {
+        margin-top: 4px;
+        color: #495057;
+        font-weight: 400;
+        line-height: 1.4;
+        max-height: 65px;
+        overflow: hidden;
+    }
+    
+    .nav-button.new-post-button {
+        font-size: 24px;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #004186;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+        transition: all 0.25s ease;
+    }
+    
+    .nav-button {
+        text-align: center;
+    }
+    
+    .nav-button.new-post-button:hover {
+        background-color: #002349;
+    }
+    
+    .heart {
+        color: #611;
+    }
