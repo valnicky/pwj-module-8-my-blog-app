@@ -1,6 +1,7 @@
     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
+        position: relative;
     }
     
     .post-link {
@@ -51,8 +52,7 @@
     }
     
     .main {
-        background-color: yellow;
-        height: 100px;
+        background-color: #fff;
         margin-top: 32px;
         display: flex;
         justify-content: center;
@@ -102,7 +102,7 @@
     
     .post-content {
         flex-basis: 60%;
-        background-color: royalblue;
+        box-shadow: 1px 1px 0.1 solid royalblue;
         padding: 24px;
     }
     
@@ -161,4 +161,10 @@
     
     .heart {
         color: #611;
+    }
+    
+    .add-post {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
     }
