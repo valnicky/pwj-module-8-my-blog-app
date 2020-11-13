@@ -1,5 +1,4 @@
-
-form > * {
+form>* {
     display: block;
     margin-top: 16px;
     font-size: 18px;
@@ -9,7 +8,8 @@ form > * {
     width: 300px;
 }
 
-#form-post-title, #form-post-content {
+#form-post-title,
+#form-post-content {
     border: 1px solid #ced4da;
     padding: 8px;
     border-radius: 5px;
@@ -36,7 +36,3 @@ form > * {
 #form-post-submit:hover {
     background-color: #002349;
 }
-
-
-
-

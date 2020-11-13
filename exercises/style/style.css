@@ -82,15 +82,17 @@
         display: flex;
         border: 1px solid #eaecee;
         border-radius: 8px;
-        min-height: 200px;
+        min-height: 100px;
         overflow: hidden;
         transition: transform 0.5s ease, box-shadow 0.3s ease;
         cursor: pointer;
+        background-color: rgb(240, 237, 237);
     }
     
     .post:hover {
         transform: translate3d(0, -20px, 0);
         box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.1);
+        background-color: rgb(255, 255, 255);
     }
     
     .post-image {
@@ -160,11 +162,26 @@
     }
     
     .heart {
-        color: #611;
+        color: rgb(253, 55, 55);
     }
     
     .add-post {
         position: absolute;
         right: 30px;
         bottom: 30px;
+    }
+    
+    .navigation {
+        border: 1px solid #a0b7cc;
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        width: 60px;
+        text-align: center;
+    }
+    
+    .navigation a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.2em;
+        color: #a0b7cc;
     }
