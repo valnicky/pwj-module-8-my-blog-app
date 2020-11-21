@@ -8,11 +8,9 @@ window.onload = () => {
 const getPosts = () => {
   fetch(API_URL, {
     method: "GET",
-  })
-    .then((response) => {
+  }).then((response) => {
       return response.json();
-    })
-    .then((data) => {
+    }).then((data) => {
       buildPosts(data);
     });
 };
