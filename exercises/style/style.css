@@ -16,9 +16,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url(../assets/banner.jpeg);
         background-size: cover;
         position: relative;
+    }
+    
+    .home-page header,
+    .new-post-page header {
+        background-image: url(../assets/banner.jpeg);
     }
     
     header>* {
@@ -41,7 +45,8 @@
         background-size: cover;
     }
     
-    .profile-name {
+    .profile-name,
+    .titleo {
         font-size: 3em;
         font-weight: bold;
     }
@@ -97,7 +102,6 @@
     
     .post-image {
         flex-basis: 40%;
-        /*background-image: url('../assets/duck.jpg');*/
         background-size: cover;
         background-position: center;
     }
@@ -184,4 +188,8 @@
         font-weight: 700;
         font-size: 1.2em;
         color: #a0b7cc;
+    }
+    
+    a.post-link {
+        text-decoration: none;
     }

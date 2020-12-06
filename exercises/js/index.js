@@ -2,36 +2,38 @@ const API_URL = "http://localhost:3000/api/posts";
 const API_BASE_URL = "http://localhost:3000/";
 
 window.onload = () => {
-  getPosts();
+    getPosts();
 };
 
 const getPosts = () => {
-  fetch(API_URL, {
-    method: "GET",
-  }).then((response) => {
-      return response.json();
+    fetch(API_URL, {
+        method: "GET",
+    }).then((response) => {
+        return response.json();
     }).then((data) => {
-      buildPosts(data);
+        buildPosts(data);
     });
-};
+}
 
 const buildPosts = (blogPosts) => {
-  let blogPostsContent = "";
-  for(blogPost of blogPosts){
-    const postDate = new Date(parseInt(blogPost.added_date)).toDateString();
-    const postImage = `${API_BASE_URL} ${blogPost.post-image}`;
+    let blogPostsContent = "";
+    for (blogPost of blogPosts) {
+        const postDate = new Date(parseInt(blogPost.added_date)).toDateString();
+        const postImage = `${API_BASE_URL}${blogPost.post_image}`;
+        const postLink = `/post.html?id=${blogPost.id}`;
 
-    
-    blogPostsContent += `<div class="post">
-                <div class="post-image" style="background-image: url(${postImage})"><img src="" alt=""></div>
+        blogPostsContent += `
+    <a class="post-link" href="${postLink}">
+    <div class="post">
+                <div class="post-image" style="background-image: url(${postImage})"></div>
                 <div class="post-content">
-                    <p class="post-date">${postDate}</p>
-                    <h4 class="post-title">${blogPost.title}</h4>
-                    <p class="post-text">${blogPost.content}
-                    </p>
+                    <div class="post-date">${postDate}</div>
+                    <div class="post-title"><h4>${blogPost.title}</h4></div>
+                    <div class="post-text"><p>${blogPost.content}</p>
+                    </div>
                 </div>
-            </div>`
-  }
-  
-  document.querySelector('.blog-post').innerHTML = blogPostContent;
+            </div></a>`
+    }
+
+    document.querySelector('.blog-posts').innerHTML = blogPostsContent;
 };
