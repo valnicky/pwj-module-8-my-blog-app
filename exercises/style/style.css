@@ -37,6 +37,7 @@
     }
     
     .profile-image {
+        margin-left: 35%;
         width: 100px;
         height: 100px;
         background-color: #fff;
